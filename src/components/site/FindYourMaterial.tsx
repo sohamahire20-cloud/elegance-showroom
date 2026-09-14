@@ -41,7 +41,7 @@ export function FindYourMaterial() {
   const [feel, setFeel] = useState<string | null>(null);
 
   const ready = Boolean(space && feel);
-  const recs = feel ? RECS[feel] : [];
+  const recs = (feel ? RECS[feel] : []) ?? [];
 
   return (
     <section id="find" className="px-6 py-24 md:px-14 md:py-36">
